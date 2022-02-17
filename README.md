@@ -46,6 +46,11 @@ storage/app/failures.xlsx
 Для проверки запускаем второй набор данных (повторяющиеся по email записи обновляются):<br>
 ./vendor/bin/sail artisan import:customers random2.csv
 
+Изменённые или добавленные классы находятся здесь:<br>
+app/Console<br>
+app/Exports<br>
+app/Imports<br>
+app/Services<br>
 
 
 
