@@ -12,38 +12,38 @@
 
 <strong>Как запустить:</strong>
 
-Скачиваем проект с репозитория:
+Скачиваем проект с репозитория:<br>
 git clone https://github.com/Vitalex234/migrate-consumer-data.git
 
-Устанавливаем composer
+Устанавливаем composer<br>
 sudo apt install composer
 
-Скачиваем зависимости (требуется php не ниже 8.0)
+Скачиваем зависимости (требуется php не ниже 8.0)<br>
 composer install
 
-Копируем файл с настройками проекта:
+Копируем файл с настройками проекта:<br>
 cp .env.example .env
 
-Запускаем laravel sail:
+Запускаем laravel sail:<br>
 ./vendor/bin/sail up -d
 
-Генерируем ключ приложения:
+Генерируем ключ приложения:<br>
 ./vendor/bin/sail artisan key:generate
 
-Выполняем миграции:
+Выполняем миграции:<br>
 ./vendor/bin/sail artisan migrate
 
-Выполняем консольную утилиту:
+Выполняем консольную утилиту:<br>
 ./vendor/bin/sail artisan import:customers random.csv
 
-Посмотреть результат в бд можно через консольный доступ:
-./vendor/bin/sail artisan db
+Посмотреть результат в бд можно через консольный доступ:<br>
+./vendor/bin/sail artisan db<br>
 SELECT * FROM customers;
 
-Появился файл со списком ошибок:
+Появился файл со списком ошибок:<br>
 storage/app/failures.xlsx
 
-Для проверки запускаем второй набор данных (повторяющиеся по email записи обновляются):
+Для проверки запускаем второй набор данных (повторяющиеся по email записи обновляются):<br>
 ./vendor/bin/sail artisan import:customers random2.csv
 
 
